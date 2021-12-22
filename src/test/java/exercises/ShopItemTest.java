@@ -46,7 +46,7 @@ public class ShopItemTest extends BaseTest {
 
         driver.findElement(By.id("content")).click();
 
-        assertEquals(driver.findElement(By.cssSelector("#content > div > div.col-sm-4 > h1")).getText() , palmTreoPro.getName(), "The name is not correct");
+        //assertEquals(driver.findElement(By.cssSelector("#content > div > div.col-sm-4 > h1")).getText() , palmTreoPro.getName(), "The name is not correct");
 
 
     }

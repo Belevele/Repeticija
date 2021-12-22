@@ -46,11 +46,16 @@ public class ExerciseOne extends BaseTest {
         productPage.enterFirstName();
         productPage.enterLastName();
         productPage.enterEmail();
-        productPage.enterTelephone();
-        productPage.enterPassword();
-        productPage.enterPasswordConfirm();
+//        productPage.enterTelephone();
+//        productPage.enterPassword();
+//        productPage.enterPasswordConfirm();
+//
+//        driver.findElement(By.cssSelector("input[type='submit']")).click();
 
-        driver.findElement(By.cssSelector("input[type='submit']")).click();
+
+        System.out.println(driver.findElement(By.id("account")).findElements(By.className("control-label")).size());
+        driver.findElement(By.xpath("//input[@name='agree']")).click();
+        System.out.println(driver.findElement(By.xpath("//input[@name='agree']")).isSelected());
 
 
     }
