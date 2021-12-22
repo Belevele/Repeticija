@@ -31,6 +31,7 @@ public class ExerciseOne extends BaseTest {
         productPage.clickLogin();
         productPage.sendEmail();
         productPage.sendPassword();
+        productPage.submitLogin();
 
         String expectedLoginErrorMessage = "No match for E-Mail Address";
         String actualLoginErrorMessage = productPage.getTextFromLoginErrorMessage();
@@ -38,5 +39,19 @@ public class ExerciseOne extends BaseTest {
 
         int actualSize = driver.findElements(By.name("search")).size();
         System.out.println("Number of search boxes: " + actualSize);
+
+        productPage.clickMyAccount();
+        productPage.clickRegister();
+
+        productPage.enterFirstName();
+        productPage.enterLastName();
+        productPage.enterEmail();
+        productPage.enterTelephone();
+        productPage.enterPassword();
+        productPage.enterPasswordConfirm();
+
+        driver.findElement(By.cssSelector("input[type='submit']")).click();
+
+
     }
 }
